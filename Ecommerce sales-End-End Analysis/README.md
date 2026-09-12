@@ -114,32 +114,3 @@ Based on Python EDA and SQL queries, here are the core findings:
 5. **Inventory Alert Status**: Currently, **22%** of products are flagged with "Restock Alert" (stock level at or below the reorder threshold).
    * *Recommendation*: Set up automated reorder emails linking the Excel Inventory sheet directly to suppliers to prevent stock-outs.
 
----
-
-## 🛠️ How to Run the Code
-
-### Prerequisites
-* Python 3.10+
-* Required packages: `pandas`, `numpy`, `matplotlib`, `openpyxl`
-
-### Step-by-Step Instructions
-1. Clone this repository.
-2. Navigate to the `python` directory and generate the synthetic raw dataset:
-   ```bash
-   python generate_data.py
-   ```
-3. Run the data cleaning script to preprocess raw CSVs:
-   ```bash
-   python data_cleaning.py
-   ```
-4. Generate the analytical charts:
-   ```bash
-   python eda.py
-   ```
-5. Build the styled Excel diagnostics sheet:
-   ```bash
-   python ../excel/generate_excel.py
-   ```
-6. Load the cleaned CSV files from `data/processed/` into your database of choice (e.g. SQLite, PostgreSQL) and run `sql/queries.sql` to verify database analytics.
-7. Open Power BI, import the processed CSV files, and utilize `power_bi/model_schema.md` and `power_bi/dax_measures.dax` to assemble the interactive dashboards.
- 
